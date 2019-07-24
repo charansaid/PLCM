@@ -11,8 +11,10 @@
       <class name="test.APIEumsGETTests">
         <methods>
           <include name="GetEUMsSuperAdminRole"/>
+          <include name="GetEUMsInvalidAPIToken"/>
           <include name="GetEUMsInvalidName"/>
           <include name="GetEUMsStandardRole"/>
+          <include name="GetEUMsMissingAPIToken"/>
         </methods>
       </class> <!-- test.APIEumsGETTests -->
     </classes>
