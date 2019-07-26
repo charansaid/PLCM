@@ -1,5 +1,4 @@
 package test;
-
 import org.json.simple.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -530,9 +529,9 @@ public class APIEuiccPOSTTests {
 		"\"profiles\":[\""+"\"{\""+"\"customer_id\": 2,"+
 				"\"datagen_source\": \"Oasis\","+
 				"\"fallback_attribute\": \"false\","+
-				"\"iccid\": 321243,"+
-				"\"msisdn\": 250701,"+
-				"\"smdp_id\": 200,"+
+				"\"iccid\": 03212430321243,"+
+				"\"msisdn\": 08624250701,"+
+				"\"smdp_id\": 200.88.112.6,"+
 				"\"storage_entity\":\"PLCM\","+
 				"\"type\":\"4G\","+
 				"\"up_id\":1000,"+
