@@ -2,55 +2,24 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1952" started-at="2019-07-26T07:11:27Z" finished-at="2019-07-26T07:11:29Z">
+  <suite name="Default suite" duration-ms="2809" started-at="2019-08-01T09:19:19Z" finished-at="2019-08-01T09:19:22Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1952" started-at="2019-07-26T07:11:27Z" finished-at="2019-07-26T07:11:29Z">
-      <class name="test.APIEuiccPOSTTests">
-        <test-method status="FAIL" signature="CreateEuicc()[pri:0, instance:test.APIEuiccPOSTTests@2fc14f68]" name="CreateEuicc" duration-ms="1929" started-at="2019-07-26T12:41:27Z" finished-at="2019-07-26T12:41:29Z">
+    <test name="Default test" duration-ms="2809" started-at="2019-08-01T09:19:19Z" finished-at="2019-08-01T09:19:22Z">
+      <class name="api.Customers.APICustomersGETTests">
+        <test-method status="FAIL" signature="GetAllCustomersStandardRole()[pri:0, instance:api.Customers.APICustomersGETTests@6fffcba5]" name="GetAllCustomersStandardRole" duration-ms="2780" started-at="2019-08-01T14:49:19Z" finished-at="2019-08-01T14:49:22Z">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[1 expectation failed.
-Expected status code <200> but was <415>.
-]]>
+              <![CDATA[Correct status code expected [401] but found [404]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: 1 expectation failed.
-Expected status code <200> but was <415>.
-
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:83)
-	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:77)
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:238)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:250)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:494)
-	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:116)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:128)
-	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:656)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:157)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:169)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:125)
-	at io.restassured.specification.ResponseSpecification$statusCode$0.callCurrent(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallCurrent(CallSiteArray.java:51)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:157)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:169)
-	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:133)
-	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:119)
-	at test.APIEuiccPOSTTests.CreateEuicc(APIEuiccPOSTTests.java:542)
+              <![CDATA[java.lang.AssertionError: Correct status code expected [401] but found [404]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at api.Customers.APICustomersGETTests.GetAllCustomersStandardRole(APICustomersGETTests.java:37)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -80,8 +49,8 @@ Expected status code <200> but was <415>.
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CreateEuicc -->
-      </class> <!-- test.APIEuiccPOSTTests -->
+        </test-method> <!-- GetAllCustomersStandardRole -->
+      </class> <!-- api.Customers.APICustomersGETTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
