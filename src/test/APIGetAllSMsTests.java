@@ -118,7 +118,7 @@ public class APIGetAllSMsTests {
 		Assert.assertEquals(statusCode, 200,"Correct status code");
   }
   
-  @Test(enabled=false)
+  @Test
   public void GetAllSMsMissingAPIToken() {
 	  
 	  RestAssured.useRelaxedHTTPSValidation();

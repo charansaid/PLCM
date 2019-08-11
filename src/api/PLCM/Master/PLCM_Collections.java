@@ -5,7 +5,7 @@ import api.PLCM.Scripts.*;
 
 public class PLCM_Collections {
 
-	@Test(priority=1, enabled = false)
+	@Test(priority=1, enabled = true)
 	public void SmEntityInfo() {
 
 		APIEntityInfoPOSTTests smpost = new APIEntityInfoPOSTTests();
@@ -16,7 +16,7 @@ public class PLCM_Collections {
 		System.out.println("==============================");
 		System.out.println("Before loading data in to Entity_Info table");
 		smpost.CreateSm_Success();
-		smpost.CreateSm_SuccessAdminRole();
+		/*smpost.CreateSm_SuccessAdminRole();
 		smpost.CreateSm_SuccessCustomerOwnerRole();
 		smpost.CreateSm_SuccessStandardRole();
 		smpost.CreateSmAlreadyExists();
@@ -113,7 +113,7 @@ public class PLCM_Collections {
 		System.out.println("After deleting data from Entity_Info table");
 		System.out.println("============================");
 		System.out.println("SM API DELETE REQUESTS END HERE");
-		System.out.println("============================"); 
+		System.out.println("============================"); */
 
 	}
 
@@ -389,7 +389,7 @@ public class PLCM_Collections {
 		System.out.println("===================================");
 	}
 
-	@Test(priority=5,enabled=true)
+	@Test(priority=5,enabled=false)
 	public void PProfile(){
 
 		APIPProfilePOSTTests pppost = new APIPProfilePOSTTests();
@@ -514,7 +514,7 @@ public class PLCM_Collections {
 		System.out.println("===================================");
 	}
 
-	@Test(priority=7,enabled=true)
+	@Test(priority=7,enabled=false)
 	public void EUM(){
 
 		APIEumPOSTTests eumpost = new APIEumPOSTTests();

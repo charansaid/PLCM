@@ -3,16 +3,7 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="api.Customers.APICustomersGETTests"/>
+      <class name="api.PLCM.Scripts.APIEntityInfoDELETETests"/>
     </classes>
   </test> <!-- Default test -->
-  <test name="Default test(failed)">
-    <classes>
-      <class name="api.Customers.APICustomersGETTests">
-        <methods>
-          <include name="GetAllCustomersStandardRole"/>
-        </methods>
-      </class> <!-- api.Customers.APICustomersGETTests -->
-    </classes>
-  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
