@@ -11,9 +11,12 @@ import io.restassured.specification.RequestSpecification;
 
 public class APIUProfilePOSTTests {
 
+	GetToken TN = new GetToken();
+	public String TV;
+	
 	@SuppressWarnings("unchecked")
 	@Test
-	public void CreateUprofileUpNameMissing() {
+	public void CreateUprofileUpNameMissing() throws Exception {
 
 		RestAssured.useRelaxedHTTPSValidation();
 		RestAssured.baseURI = "https://localhost:8445/v2/uprofile";
@@ -28,7 +31,9 @@ public class APIUProfilePOSTTests {
 		requestParams.put("up_status",  "Validated");
 		requestParams.put("quarantine_time",  "10");
 
-		httpRequest.header("Authorization", "dmFsaWQtY3VzdG9tZXIz");
+		TV = TN.fetch("sa");
+		
+		httpRequest.header("Authorization", "Bearer "+TV);
 		httpRequest.header("Content-Type", "application/json");
 
 		httpRequest.body(requestParams.toJSONString());
@@ -44,7 +49,7 @@ public class APIUProfilePOSTTests {
 
 	@SuppressWarnings("unchecked")
 	@Test
-	public void CreateUprofileInvalidPPSize(){
+	public void CreateUprofileInvalidPPSize() throws Exception{
 
 		RestAssured.useRelaxedHTTPSValidation();
 		RestAssured.baseURI = "https://localhost:8445/v2/uprofile";
@@ -59,8 +64,10 @@ public class APIUProfilePOSTTests {
 		requestParams.put("pp_size",  "801S");
 		requestParams.put("up_status",  "Validated");
 		requestParams.put("quarantine_time",  "10");
+		
+		TV = TN.fetch("sa");
 
-		httpRequest.header("Authorization", "dmFsaWQtY3VzdG9tZXIz");
+		httpRequest.header("Authorization", "Bearer "+TV);
 		httpRequest.header("Content-Type", "application/json");
 
 		httpRequest.body(requestParams.toJSONString());
@@ -77,7 +84,7 @@ public class APIUProfilePOSTTests {
 
 	@SuppressWarnings("unchecked")
 	@Test
-	public void CreateUprofileUpStatusNonEnum(){
+	public void CreateUprofileUpStatusNonEnum() throws Exception{
 		RestAssured.useRelaxedHTTPSValidation();
 		RestAssured.baseURI = "https://localhost:8445/v2/uprofile";
 		RequestSpecification httpRequest = RestAssured.given();
@@ -90,8 +97,10 @@ public class APIUProfilePOSTTests {
 		requestParams.put("move_version", "56.8.4"); 
 		requestParams.put("pp_size",  "802S");
 		requestParams.put("up_status",  "Validated00");
+		
+		TV = TN.fetch("sa");
 
-		httpRequest.header("Authorization", "dmFsaWQtY3VzdG9tZXIz");
+		httpRequest.header("Authorization", "Bearer "+TV);
 		httpRequest.header("Content-Type", "application/json");
 
 		httpRequest.body(requestParams.toJSONString());
@@ -110,7 +119,7 @@ public class APIUProfilePOSTTests {
 
 	@SuppressWarnings("unchecked")
 	@Test
-	public void CreateUprofileParamMoreThan40Chars(){
+	public void CreateUprofileParamMoreThan40Chars() throws Exception{
 		RestAssured.useRelaxedHTTPSValidation();
 		RestAssured.baseURI = "https://localhost:8445/v2/uprofile";
 		RequestSpecification httpRequest = RestAssured.given();
@@ -123,8 +132,10 @@ public class APIUProfilePOSTTests {
 		requestParams.put("move_version", "56.8.5"); 
 		requestParams.put("pp_size",  "803");
 		requestParams.put("up_status",  "Validated");
+		
+		TV = TN.fetch("sa");
 
-		httpRequest.header("Authorization", "dmFsaWQtY3VzdG9tZXIz");
+		httpRequest.header("Authorization", "Bearer "+TV);
 		httpRequest.header("Content-Type", "application/json");
 
 		httpRequest.body(requestParams.toJSONString());
@@ -140,7 +151,7 @@ public class APIUProfilePOSTTests {
 
 	@SuppressWarnings("unchecked")
 	@Test
-	public void CreateUprofileInvalidUPType(){
+	public void CreateUprofileInvalidUPType() throws Exception{
 		RestAssured.useRelaxedHTTPSValidation();
 		RestAssured.baseURI = "https://localhost:8445/v2/uprofile";
 		RequestSpecification httpRequest = RestAssured.given();
@@ -153,8 +164,10 @@ public class APIUProfilePOSTTests {
 		requestParams.put("move_version", "56.8.6"); 
 		requestParams.put("pp_size",  "804");
 		requestParams.put("up_status",  "Validated");
+		
+		TV = TN.fetch("sa");
 
-		httpRequest.header("Authorization", "dmFsaWQtY3VzdG9tZXIz");
+		httpRequest.header("Authorization", "Bearer "+TV);
 		httpRequest.header("Content-Type", "application/json");
 
 		httpRequest.body(requestParams.toJSONString());
@@ -170,7 +183,7 @@ public class APIUProfilePOSTTests {
 
 	@SuppressWarnings("unchecked")
 	@Test
-	public void CreateUprofileInvalidMoveVersion(){
+	public void CreateUprofileInvalidMoveVersion() throws Exception{
 
 		RestAssured.useRelaxedHTTPSValidation();
 		RestAssured.baseURI = "https://localhost:8445/v2/uprofile";
@@ -184,8 +197,10 @@ public class APIUProfilePOSTTests {
 		requestParams.put("move_version", ""); 
 		requestParams.put("pp_size",  "805");
 		requestParams.put("up_status",  "Validated");
+		
+		TV = TN.fetch("sa");
 
-		httpRequest.header("Authorization", "dmFsaWQtY3VzdG9tZXIz");
+		httpRequest.header("Authorization", "Bearer "+TV);
 		httpRequest.header("Content-Type", "application/json");
 
 		httpRequest.body(requestParams.toJSONString());
@@ -202,7 +217,7 @@ public class APIUProfilePOSTTests {
 
 	@SuppressWarnings("unchecked")
 	@Test
-	public void CreateUprofileCustomerOwnerRole(){
+	public void CreateUprofileCustomerOwnerRole() throws Exception{
 
 		RestAssured.useRelaxedHTTPSValidation();
 		RestAssured.baseURI = "https://localhost:8445/v2/uprofile";
@@ -216,8 +231,10 @@ public class APIUProfilePOSTTests {
 		requestParams.put("move_version", "56.8.7"); 
 		requestParams.put("pp_size",  "806");
 		requestParams.put("up_status",  "Validated");
+		
+		TV = TN.fetch("system");
 
-		httpRequest.header("Authorization", "dmFsaWQtY3VzdG9tZXI3");
+		httpRequest.header("Authorization", "Bearer "+TV);
 		httpRequest.header("Content-Type", "application/json");
 
 		httpRequest.body(requestParams.toJSONString());
@@ -234,7 +251,7 @@ public class APIUProfilePOSTTests {
 
 	@SuppressWarnings("unchecked")
 	@Test
-	public void CreateUprofileInvalidUPId(){
+	public void CreateUprofileInvalidUPId() throws Exception{
 
 		RestAssured.useRelaxedHTTPSValidation();
 		RestAssured.baseURI = "https://localhost:8445/v2/uprofile";
@@ -248,8 +265,10 @@ public class APIUProfilePOSTTests {
 		requestParams.put("move_version", "56.8.8"); 
 		requestParams.put("pp_size",  "807");
 		requestParams.put("up_status",  "Validated");
+		
+		TV = TN.fetch("sa");
 
-		httpRequest.header("Authorization", "dmFsaWQtY3VzdG9tZXIz");
+		httpRequest.header("Authorization", "Bearer "+TV);
 		httpRequest.header("Content-Type", "application/json");
 
 		httpRequest.body(requestParams.toJSONString());
@@ -265,7 +284,7 @@ public class APIUProfilePOSTTests {
 
 	@SuppressWarnings("unchecked")
 	@Test
-	public void CreateUprofileAdminRole(){
+	public void CreateUprofileAdminRole() throws Exception{
 
 		RestAssured.useRelaxedHTTPSValidation();
 		RestAssured.baseURI = "https://localhost:8445/v2/uprofile";
@@ -279,8 +298,10 @@ public class APIUProfilePOSTTests {
 		requestParams.put("move_version", "56.8.9"); 
 		requestParams.put("pp_size",  "808");
 		requestParams.put("up_status",  "Validated");
+		
+		TV = TN.fetch("admin");
 
-		httpRequest.header("Authorization", "dmFsaWQtY3VzdG9tZXI1");
+		httpRequest.header("Authorization", "Bearer "+TV);
 		httpRequest.header("Content-Type", "application/json");
 
 		httpRequest.body(requestParams.toJSONString());
@@ -297,7 +318,7 @@ public class APIUProfilePOSTTests {
 
 	@SuppressWarnings("unchecked")
 	@Test
-	public void CreateUprofileInvalidAPIToken(){
+	public void CreateUprofileInvalidAPIToken() throws Exception{
 
 		RestAssured.useRelaxedHTTPSValidation();
 		RestAssured.baseURI = "https://localhost:8445/v2/uprofile";
@@ -311,8 +332,10 @@ public class APIUProfilePOSTTests {
 		requestParams.put("move_version", "56.8.10"); 
 		requestParams.put("pp_size",  "809");
 		requestParams.put("up_status",  "Validated");
+		
+		TV = TN.fetch("invalidapitoken");
 
-		httpRequest.header("Authorization", "indmFsaWQtY3VzdG9tZXIx");
+		httpRequest.header("Authorization", "Bearer "+TV);
 		httpRequest.header("Content-Type", "application/json");
 
 		httpRequest.body(requestParams.toJSONString());
@@ -329,7 +352,7 @@ public class APIUProfilePOSTTests {
 
 	@SuppressWarnings("unchecked")
 	@Test
-	public void CreateUprofileUpIdMissing(){
+	public void CreateUprofileUpIdMissing() throws Exception{
 
 		RestAssured.useRelaxedHTTPSValidation();
 		RestAssured.baseURI = "https://localhost:8445/v2/uprofile";
@@ -343,8 +366,10 @@ public class APIUProfilePOSTTests {
 		requestParams.put("move_version", "56.8.11"); 
 		requestParams.put("pp_size",  "810");
 		requestParams.put("up_status",  "Validated");
+		
+		TV = TN.fetch("sa");
 
-		httpRequest.header("Authorization", "dmFsaWQtY3VzdG9tZXIz");
+		httpRequest.header("Authorization", "Bearer "+TV);
 		httpRequest.header("Content-Type", "application/json");
 
 		httpRequest.body(requestParams.toJSONString());
@@ -361,7 +386,7 @@ public class APIUProfilePOSTTests {
 
 	@SuppressWarnings("unchecked")
 	@Test
-	public void CreateUprofileInvalidURL(){
+	public void CreateUprofileInvalidURL() throws Exception{
 
 		RestAssured.useRelaxedHTTPSValidation();
 		RestAssured.baseURI = "https://localhost:8445/v2/uprofileee";
@@ -375,8 +400,10 @@ public class APIUProfilePOSTTests {
 		requestParams.put("move_version", "56.8.12"); 
 		requestParams.put("pp_size",  "811");
 		requestParams.put("up_status",  "Validated");
+		
+		TV = TN.fetch("sa");
 
-		httpRequest.header("Authorization", "dmFsaWQtY3VzdG9tZXIx");
+		httpRequest.header("Authorization", "Bearer "+TV);
 		httpRequest.header("Content-Type", "application/json");
 
 		httpRequest.body(requestParams.toJSONString());
@@ -393,7 +420,7 @@ public class APIUProfilePOSTTests {
 
 	@SuppressWarnings("unchecked")
 	@Test
-	public void CreateUprofileUpStatusUnderTest(){
+	public void CreateUprofileUpStatusUnderTest() throws Exception{
 
 		RestAssured.useRelaxedHTTPSValidation();
 		RestAssured.baseURI = "https://localhost:8445/v2/uprofile";
@@ -407,8 +434,10 @@ public class APIUProfilePOSTTests {
 		requestParams.put("move_version", "56.8.13"); 
 		requestParams.put("pp_size",  "812");
 		requestParams.put("up_status",  "Under Test");
+		
+		TV = TN.fetch("sa");
 
-		httpRequest.header("Authorization", "dmFsaWQtY3VzdG9tZXIz");
+		httpRequest.header("Authorization", "Bearer "+TV);
 		httpRequest.header("Content-Type", "application/json");
 
 		httpRequest.body(requestParams.toJSONString());
@@ -425,7 +454,7 @@ public class APIUProfilePOSTTests {
 
 	@SuppressWarnings("unchecked")
 	@Test
-	public void CreateUprofileUpTypeMissing(){
+	public void CreateUprofileUpTypeMissing() throws Exception{
 
 		RestAssured.useRelaxedHTTPSValidation();
 		RestAssured.baseURI = "https://localhost:8445/v2/uprofile";
@@ -438,8 +467,10 @@ public class APIUProfilePOSTTests {
 		requestParams.put("move_version", "56.8.14"); 
 		requestParams.put("pp_size",  "813");
 		requestParams.put("up_status",  "Validated");
+		
+		TV = TN.fetch("sa");
 
-		httpRequest.header("Authorization", "dmFsaWQtY3VzdG9tZXIz");
+		httpRequest.header("Authorization", "Bearer "+TV);
 		httpRequest.header("Content-Type", "application/json");
 
 		httpRequest.body(requestParams.toJSONString());
@@ -456,7 +487,7 @@ public class APIUProfilePOSTTests {
 
 	@SuppressWarnings("unchecked")
 	@Test
-	public void CreateUprofile(){
+	public void CreateUprofile() throws Exception{
 
 		RestAssured.useRelaxedHTTPSValidation();
 		RestAssured.baseURI = "https://localhost:8445/v2/uprofile";
@@ -470,8 +501,10 @@ public class APIUProfilePOSTTests {
 		requestParams.put("move_version", "56.8.15"); 
 		requestParams.put("pp_size",  "814");
 		requestParams.put("up_status",  "Validated");
+		
+		TV = TN.fetch("sa");
 
-		httpRequest.header("Authorization", "dmFsaWQtY3VzdG9tZXIz");
+		httpRequest.header("Authorization", "Bearer "+TV);
 		httpRequest.header("Content-Type", "application/json");
 
 		httpRequest.body(requestParams.toJSONString());
@@ -488,7 +521,7 @@ public class APIUProfilePOSTTests {
 
 	@SuppressWarnings("unchecked")
 	@Test
-	public void CreateUprofileWithSameNameAndId(){
+	public void CreateUprofileWithSameNameAndId() throws Exception{
 
 		RestAssured.useRelaxedHTTPSValidation();
 		RestAssured.baseURI = "https://localhost:8445/v2/uprofile";
@@ -502,8 +535,10 @@ public class APIUProfilePOSTTests {
 		requestParams.put("move_version", "56.8.16"); 
 		requestParams.put("pp_size",  "815");
 		requestParams.put("up_status",  "Validated");
+		
+		TV = TN.fetch("sa");
 
-		httpRequest.header("Authorization", "dmFsaWQtY3VzdG9tZXIz");
+		httpRequest.header("Authorization", "Bearer "+TV);
 		httpRequest.header("Content-Type", "application/json");
 
 		httpRequest.body(requestParams.toJSONString());
@@ -520,7 +555,7 @@ public class APIUProfilePOSTTests {
 
 	@SuppressWarnings("unchecked")
 	@Test
-	public void CreateUprofileAlphaNumericUpId(){
+	public void CreateUprofileAlphaNumericUpId() throws Exception{
 
 		RestAssured.useRelaxedHTTPSValidation();
 		RestAssured.baseURI = "https://localhost:8445/v2/uprofile";
@@ -534,8 +569,10 @@ public class APIUProfilePOSTTests {
 		requestParams.put("move_version", "56.8.17"); 
 		requestParams.put("pp_size",  "816");
 		requestParams.put("up_status",  "Validated");
+		
+		TV = TN.fetch("sa");
 
-		httpRequest.header("Authorization", "dmFsaWQtY3VzdG9tZXIz");
+		httpRequest.header("Authorization", "Bearer "+TV);
 		httpRequest.header("Content-Type", "application/json");
 
 		httpRequest.body(requestParams.toJSONString());
@@ -552,7 +589,7 @@ public class APIUProfilePOSTTests {
 
 	@SuppressWarnings("unchecked")
 	@Test
-	public void CreateUprofileUpVersionMissing(){
+	public void CreateUprofileUpVersionMissing() throws Exception{
 
 		RestAssured.useRelaxedHTTPSValidation();
 		RestAssured.baseURI = "https://localhost:8445/v2/uprofile";
@@ -566,8 +603,10 @@ public class APIUProfilePOSTTests {
 		requestParams.put("move_version", "56.8.18"); 
 		requestParams.put("pp_size",  "817");
 		requestParams.put("up_status",  "Validated");
+		
+		TV = TN.fetch("sa");
 
-		httpRequest.header("Authorization", "dmFsaWQtY3VzdG9tZXIz");
+		httpRequest.header("Authorization", "Bearer "+TV);
 		httpRequest.header("Content-Type", "application/json");
 
 		httpRequest.body(requestParams.toJSONString());
@@ -584,7 +623,7 @@ public class APIUProfilePOSTTests {
 
 	@SuppressWarnings("unchecked")
 	@Test
-	public void CreateUprofileInvalidQuarantineTime(){
+	public void CreateUprofileInvalidQuarantineTime() throws Exception{
 
 		RestAssured.useRelaxedHTTPSValidation();
 		RestAssured.baseURI = "https://localhost:8445/v2/uprofile";
@@ -599,8 +638,10 @@ public class APIUProfilePOSTTests {
 		requestParams.put("pp_size",  "818");
 		requestParams.put("up_status",  "Validated");
 		requestParams.put("quarantine_time",  "-90");
+		
+		TV = TN.fetch("sa");
 
-		httpRequest.header("Authorization", "dmFsaWQtY3VzdG9tZXIz");
+		httpRequest.header("Authorization", "Bearer "+TV);
 		httpRequest.header("Content-Type", "application/json");
 
 		httpRequest.body(requestParams.toJSONString());
@@ -617,7 +658,7 @@ public class APIUProfilePOSTTests {
 
 	@SuppressWarnings("unchecked")
 	@Test
-	public void CreateUprofileUpStatusMissing(){
+	public void CreateUprofileUpStatusMissing() throws Exception{
 
 		RestAssured.useRelaxedHTTPSValidation();
 		RestAssured.baseURI = "https://localhost:8445/v2/uprofile";
@@ -630,8 +671,10 @@ public class APIUProfilePOSTTests {
 		requestParams.put("up_version", "22.3.5.20");
 		requestParams.put("move_version", "56.8.20"); 
 		requestParams.put("pp_size",  "819");
+		
+		TV = TN.fetch("sa");
 
-		httpRequest.header("Authorization", "dmFsaWQtY3VzdG9tZXIz");
+		httpRequest.header("Authorization", "Bearer "+TV);
 		httpRequest.header("Content-Type", "application/json");
 
 		httpRequest.body(requestParams.toJSONString());
@@ -648,7 +691,7 @@ public class APIUProfilePOSTTests {
 
 	@SuppressWarnings("unchecked")
 	@Test
-	public void CreateUprofileQuarantineTimeMissing(){
+	public void CreateUprofileQuarantineTimeMissing() throws Exception{
 
 		RestAssured.useRelaxedHTTPSValidation();
 		RestAssured.baseURI = "https://localhost:8445/v2/uprofile";
@@ -662,8 +705,10 @@ public class APIUProfilePOSTTests {
 		requestParams.put("move_version", "56.8.21"); 
 		requestParams.put("pp_size",  "820");
 		requestParams.put("up_status",  "Validated");
+		
+		TV = TN.fetch("sa");
 
-		httpRequest.header("Authorization", "dmFsaWQtY3VzdG9tZXIz");
+		httpRequest.header("Authorization", "Bearer "+TV);
 		httpRequest.header("Content-Type", "application/json");
 
 		httpRequest.body(requestParams.toJSONString());
@@ -680,7 +725,7 @@ public class APIUProfilePOSTTests {
 
 	@SuppressWarnings("unchecked")
 	@Test
-	public void CreateUprofileMissingAPIToken(){
+	public void CreateUprofileMissingAPIToken() throws Exception{
 
 		RestAssured.useRelaxedHTTPSValidation();
 		RestAssured.baseURI = "https://localhost:8445/v2/uprofile";
@@ -694,7 +739,10 @@ public class APIUProfilePOSTTests {
 		requestParams.put("move_version", "56.8.22"); 
 		requestParams.put("pp_size",  "821");
 		requestParams.put("up_status",  "Validated");
-
+		
+		TV = TN.fetch("missingapitoken");
+		
+		httpRequest.header("Authorization", "Bearer "+TV);
 		httpRequest.header("Content-Type", "application/json");
 
 		httpRequest.body(requestParams.toJSONString());
@@ -705,13 +753,13 @@ public class APIUProfilePOSTTests {
 
 		System.out.println("Response body: " + response.body().asString());
 
-		Assert.assertEquals(statusCode, 400);
+		Assert.assertEquals(statusCode, 401);
 
 	}
 
 	@SuppressWarnings("unchecked")
 	@Test
-	public void CreateUprofilePpSizeMissing(){
+	public void CreateUprofilePpSizeMissing() throws Exception{
 
 		RestAssured.useRelaxedHTTPSValidation();
 		RestAssured.baseURI = "https://localhost:8445/v2/uprofile";
@@ -724,8 +772,10 @@ public class APIUProfilePOSTTests {
 		requestParams.put("up_version", "22.3.5.23");
 		requestParams.put("move_version", "56.8.23"); 
 		requestParams.put("up_status",  "Validated");
+		
+		TV = TN.fetch("sa");
 
-		httpRequest.header("Authorization", "dmFsaWQtY3VzdG9tZXIz");
+		httpRequest.header("Authorization", "Bearer "+TV);
 		httpRequest.header("Content-Type", "application/json");
 
 		httpRequest.body(requestParams.toJSONString());
@@ -742,7 +792,7 @@ public class APIUProfilePOSTTests {
 
 	@SuppressWarnings("unchecked")
 	@Test
-	public void CreateUprofileInvalidUPVersion(){
+	public void CreateUprofileInvalidUPVersion() throws Exception{
 
 		RestAssured.useRelaxedHTTPSValidation();
 		RestAssured.baseURI = "https://localhost:8445/v2/uprofile";
@@ -752,12 +802,14 @@ public class APIUProfilePOSTTests {
 		requestParams.put("up_id", "1023");
 		requestParams.put("up_name", "SAI1382");
 		requestParams.put("up_type", "LTE");
-		requestParams.put("up_version", "-22.3524");
+		requestParams.put("up_version", "");
 		requestParams.put("move_version", "56.8.24"); 
 		requestParams.put("pp_size",  "823");
 		requestParams.put("up_status",  "Validated");
+		
+		TV = TN.fetch("sa");
 
-		httpRequest.header("Authorization", "dmFsaWQtY3VzdG9tZXIz");
+		httpRequest.header("Authorization", "Bearer "+TV);
 		httpRequest.header("Content-Type", "application/json");
 
 		httpRequest.body(requestParams.toJSONString());
@@ -768,13 +820,13 @@ public class APIUProfilePOSTTests {
 
 		System.out.println("Response body: " + response.body().asString());
 
-		Assert.assertEquals(statusCode, 200);
+		Assert.assertEquals(statusCode, 400);
 
 	}
 
 	@SuppressWarnings("unchecked")
 	@Test
-	public void CreateUprofileInvalidUPStatus(){
+	public void CreateUprofileInvalidUPStatus() throws Exception{
 
 		RestAssured.useRelaxedHTTPSValidation();
 		RestAssured.baseURI = "https://localhost:8445/v2/uprofile";
@@ -789,7 +841,9 @@ public class APIUProfilePOSTTests {
 		requestParams.put("pp_size",  "824");
 		requestParams.put("up_status",  "");
 
-		httpRequest.header("Authorization", "dmFsaWQtY3VzdG9tZXIz");
+		TV = TN.fetch("sa");
+		
+		httpRequest.header("Authorization", "Bearer "+TV);
 		httpRequest.header("Content-Type", "application/json");
 
 		httpRequest.body(requestParams.toJSONString());
@@ -806,7 +860,7 @@ public class APIUProfilePOSTTests {
 
 	@SuppressWarnings("unchecked")
 	@Test
-	public void CreateUprofileInvalidUPName(){
+	public void CreateUprofileInvalidUPName() throws Exception{
 
 		RestAssured.useRelaxedHTTPSValidation();
 		RestAssured.baseURI = "https://localhost:8445/v2/uprofile";
@@ -820,8 +874,10 @@ public class APIUProfilePOSTTests {
 		requestParams.put("move_version", "56.8.25"); 
 		requestParams.put("pp_size",  "825");
 		requestParams.put("up_status",  "Validated");
+		
+		TV = TN.fetch("sa");
 
-		httpRequest.header("Authorization", "dmFsaWQtY3VzdG9tZXIz");
+		httpRequest.header("Authorization", "Bearer "+TV);
 		httpRequest.header("Content-Type", "application/json");
 
 		httpRequest.body(requestParams.toJSONString());
@@ -838,7 +894,7 @@ public class APIUProfilePOSTTests {
 
 	@SuppressWarnings("unchecked")
 	@Test
-	public void CreateUprofileMoveVersionMissing(){
+	public void CreateUprofileMoveVersionMissing() throws Exception{
 
 		RestAssured.useRelaxedHTTPSValidation();
 		RestAssured.baseURI = "https://localhost:8445/v2/uprofile";
@@ -851,8 +907,10 @@ public class APIUProfilePOSTTests {
 		requestParams.put("up_version", "22.3.5.26"); 
 		requestParams.put("pp_size",  "826");
 		requestParams.put("up_status",  "Validated");
+		
+		TV = TN.fetch("sa");
 
-		httpRequest.header("Authorization", "dmFsaWQtY3VzdG9tZXIz");
+		httpRequest.header("Authorization", "Bearer "+TV);
 		httpRequest.header("Content-Type", "application/json");
 
 		httpRequest.body(requestParams.toJSONString());
@@ -869,7 +927,7 @@ public class APIUProfilePOSTTests {
 
 	@SuppressWarnings("unchecked")
 	@Test
-	public void CreateUprofileExists(){
+	public void CreateUprofileExists() throws Exception{
 
 		RestAssured.useRelaxedHTTPSValidation();
 		RestAssured.baseURI = "https://localhost:8445/v2/uprofile";
@@ -883,8 +941,10 @@ public class APIUProfilePOSTTests {
 		requestParams.put("move_version", "56.8.3");
 		requestParams.put("pp_size",  "801S");
 		requestParams.put("up_status",  "Validated");
+		
+		TV = TN.fetch("sa");
 
-		httpRequest.header("Authorization", "dmFsaWQtY3VzdG9tZXIz");
+		httpRequest.header("Authorization", "Bearer "+TV);
 		httpRequest.header("Content-Type", "application/json");
 
 		httpRequest.body(requestParams.toJSONString());
@@ -901,7 +961,7 @@ public class APIUProfilePOSTTests {
 
 	@SuppressWarnings("unchecked")
 	@Test
-	public void CreateUprofileSuperAdminRole(){
+	public void CreateUprofileSuperAdminRole() throws Exception{
 
 		RestAssured.useRelaxedHTTPSValidation();
 		RestAssured.baseURI = "https://localhost:8445/v2/uprofile";
@@ -915,8 +975,10 @@ public class APIUProfilePOSTTests {
 		requestParams.put("move_version", "56.8.28");
 		requestParams.put("pp_size",  "828");
 		requestParams.put("up_status",  "Validated");
+		
+		TV = TN.fetch("sa");
 
-		httpRequest.header("Authorization", "dmFsaWQtY3VzdG9tZXIz");
+		httpRequest.header("Authorization", "Bearer "+TV);
 		httpRequest.header("Content-Type", "application/json");
 
 		httpRequest.body(requestParams.toJSONString());
@@ -933,7 +995,7 @@ public class APIUProfilePOSTTests {
 
 	@SuppressWarnings("unchecked")
 	@Test
-	public void CreateUprofileUpStatusInternal(){
+	public void CreateUprofileUpStatusInternal() throws Exception{
 
 		RestAssured.useRelaxedHTTPSValidation();
 		RestAssured.baseURI = "https://localhost:8445/v2/uprofile";
@@ -947,8 +1009,10 @@ public class APIUProfilePOSTTests {
 		requestParams.put("move_version", "56.8.28");
 		requestParams.put("pp_size",  "828");
 		requestParams.put("up_status",  "Internal");
+		
+		TV = TN.fetch("sa");
 
-		httpRequest.header("Authorization", "dmFsaWQtY3VzdG9tZXIz");
+		httpRequest.header("Authorization", "Bearer "+TV);
 		httpRequest.header("Content-Type", "application/json");
 
 		httpRequest.body(requestParams.toJSONString());

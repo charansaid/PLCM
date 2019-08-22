@@ -1,49 +1,369 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="9" passed="9">
+<testng-results skipped="0" failed="7" total="19" passed="12">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="2495" started-at="2019-08-11T11:43:45Z" finished-at="2019-08-11T11:43:48Z">
+  <suite name="Default suite" duration-ms="16112" started-at="2019-08-21T18:00:42Z" finished-at="2019-08-21T18:00:58Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="2495" started-at="2019-08-11T11:43:45Z" finished-at="2019-08-11T11:43:48Z">
-      <class name="api.PLCM.Scripts.APIEntityInfoDELETETests">
-        <test-method status="PASS" signature="DeleteEntityIdExists()[pri:0, instance:api.PLCM.Scripts.APIEntityInfoDELETETests@34340fab]" name="DeleteEntityIdExists" duration-ms="1806" started-at="2019-08-11T17:13:45Z" finished-at="2019-08-11T17:13:47Z">
+    <test name="Default test" duration-ms="16112" started-at="2019-08-21T18:00:42Z" finished-at="2019-08-21T18:00:58Z">
+      <class name="api.PLCM.Scripts.AuditCard">
+        <test-method status="PASS" signature="AuditCard_GSMA()[pri:0, instance:api.PLCM.Scripts.AuditCard@34340fab]" name="AuditCard_GSMA" duration-ms="6947" started-at="2019-08-21T23:30:42Z" finished-at="2019-08-21T23:30:49Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- DeleteEntityIdExists -->
-        <test-method status="PASS" signature="DeleteEntityIdExistsAdminRole()[pri:0, instance:api.PLCM.Scripts.APIEntityInfoDELETETests@34340fab]" name="DeleteEntityIdExistsAdminRole" duration-ms="77" started-at="2019-08-11T17:13:47Z" finished-at="2019-08-11T17:13:47Z">
+        </test-method> <!-- AuditCard_GSMA -->
+        <test-method status="FAIL" signature="AuditCard_GSMAAdminRole()[pri:0, instance:api.PLCM.Scripts.AuditCard@34340fab]" name="AuditCard_GSMAAdminRole" duration-ms="95" started-at="2019-08-21T23:30:49Z" finished-at="2019-08-21T23:30:49Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [202] but found [401]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [202] but found [401]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at api.PLCM.Scripts.AuditCard.AuditCard_GSMAAdminRole(AuditCard.java:479)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- DeleteEntityIdExistsAdminRole -->
-        <test-method status="PASS" signature="DeleteEntityIdExistsAlphaNumeric()[pri:0, instance:api.PLCM.Scripts.APIEntityInfoDELETETests@34340fab]" name="DeleteEntityIdExistsAlphaNumeric" duration-ms="98" started-at="2019-08-11T17:13:47Z" finished-at="2019-08-11T17:13:47Z">
+        </test-method> <!-- AuditCard_GSMAAdminRole -->
+        <test-method status="FAIL" signature="AuditCard_GSMACustomerOwnerRole()[pri:0, instance:api.PLCM.Scripts.AuditCard@34340fab]" name="AuditCard_GSMACustomerOwnerRole" duration-ms="84" started-at="2019-08-21T23:30:49Z" finished-at="2019-08-21T23:30:49Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [202] but found [401]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [202] but found [401]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at api.PLCM.Scripts.AuditCard.AuditCard_GSMACustomerOwnerRole(AuditCard.java:510)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- DeleteEntityIdExistsAlphaNumeric -->
-        <test-method status="PASS" signature="DeleteEntityIdExistsStandardRole()[pri:0, instance:api.PLCM.Scripts.APIEntityInfoDELETETests@34340fab]" name="DeleteEntityIdExistsStandardRole" duration-ms="80" started-at="2019-08-11T17:13:47Z" finished-at="2019-08-11T17:13:47Z">
+        </test-method> <!-- AuditCard_GSMACustomerOwnerRole -->
+        <test-method status="PASS" signature="AuditCard_GSMAEIDNotInDB()[pri:0, instance:api.PLCM.Scripts.AuditCard@34340fab]" name="AuditCard_GSMAEIDNotInDB" duration-ms="86" started-at="2019-08-21T23:30:49Z" finished-at="2019-08-21T23:30:50Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- DeleteEntityIdExistsStandardRole -->
-        <test-method status="PASS" signature="DeleteEntityV1andnotV2()[pri:0, instance:api.PLCM.Scripts.APIEntityInfoDELETETests@34340fab]" name="DeleteEntityV1andnotV2" duration-ms="86" started-at="2019-08-11T17:13:47Z" finished-at="2019-08-11T17:13:48Z">
+        </test-method> <!-- AuditCard_GSMAEIDNotInDB -->
+        <test-method status="FAIL" signature="AuditCard_GSMAEntityNotFound()[pri:0, instance:api.PLCM.Scripts.AuditCard@34340fab]" name="AuditCard_GSMAEntityNotFound" duration-ms="1144" started-at="2019-08-21T23:30:50Z" finished-at="2019-08-21T23:30:51Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [403] but found [500]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [403] but found [500]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at api.PLCM.Scripts.AuditCard.AuditCard_GSMAEntityNotFound(AuditCard.java:572)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- DeleteEntityV1andnotV2 -->
-        <test-method status="PASS" signature="DeleteWhenInvalidAPIToken()[pri:0, instance:api.PLCM.Scripts.APIEntityInfoDELETETests@34340fab]" name="DeleteWhenInvalidAPIToken" duration-ms="143" started-at="2019-08-11T17:13:48Z" finished-at="2019-08-11T17:13:48Z">
+        </test-method> <!-- AuditCard_GSMAEntityNotFound -->
+        <test-method status="PASS" signature="AuditCard_GSMAInvalidAPIToken()[pri:0, instance:api.PLCM.Scripts.AuditCard@34340fab]" name="AuditCard_GSMAInvalidAPIToken" duration-ms="1421" started-at="2019-08-21T23:30:51Z" finished-at="2019-08-21T23:30:52Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- DeleteWhenInvalidAPIToken -->
-        <test-method status="PASS" signature="DeleteWhenInvalidURL()[pri:0, instance:api.PLCM.Scripts.APIEntityInfoDELETETests@34340fab]" name="DeleteWhenInvalidURL" duration-ms="66" started-at="2019-08-11T17:13:48Z" finished-at="2019-08-11T17:13:48Z">
+        </test-method> <!-- AuditCard_GSMAInvalidAPIToken -->
+        <test-method status="PASS" signature="AuditCard_GSMAInvalidCallback()[pri:0, instance:api.PLCM.Scripts.AuditCard@34340fab]" name="AuditCard_GSMAInvalidCallback" duration-ms="171" started-at="2019-08-21T23:30:52Z" finished-at="2019-08-21T23:30:52Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- DeleteWhenInvalidURL -->
-        <test-method status="PASS" signature="DeleteWhenMissingAPIToken()[pri:0, instance:api.PLCM.Scripts.APIEntityInfoDELETETests@34340fab]" name="DeleteWhenMissingAPIToken" duration-ms="50" started-at="2019-08-11T17:13:48Z" finished-at="2019-08-11T17:13:48Z">
+        </test-method> <!-- AuditCard_GSMAInvalidCallback -->
+        <test-method status="PASS" signature="AuditCard_GSMAInvalidCallbackPassword()[pri:0, instance:api.PLCM.Scripts.AuditCard@34340fab]" name="AuditCard_GSMAInvalidCallbackPassword" duration-ms="43" started-at="2019-08-21T23:30:52Z" finished-at="2019-08-21T23:30:52Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- DeleteWhenMissingAPIToken -->
-        <test-method status="PASS" signature="DeleteWhenNoEntityExists()[pri:0, instance:api.PLCM.Scripts.APIEntityInfoDELETETests@34340fab]" name="DeleteWhenNoEntityExists" duration-ms="55" started-at="2019-08-11T17:13:48Z" finished-at="2019-08-11T17:13:48Z">
+        </test-method> <!-- AuditCard_GSMAInvalidCallbackPassword -->
+        <test-method status="PASS" signature="AuditCard_GSMAInvalidCallbackUsername()[pri:0, instance:api.PLCM.Scripts.AuditCard@34340fab]" name="AuditCard_GSMAInvalidCallbackUsername" duration-ms="34" started-at="2019-08-21T23:30:52Z" finished-at="2019-08-21T23:30:52Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- DeleteWhenNoEntityExists -->
-      </class> <!-- api.PLCM.Scripts.APIEntityInfoDELETETests -->
+        </test-method> <!-- AuditCard_GSMAInvalidCallbackUsername -->
+        <test-method status="PASS" signature="AuditCard_GSMAInvalidEID()[pri:0, instance:api.PLCM.Scripts.AuditCard@34340fab]" name="AuditCard_GSMAInvalidEID" duration-ms="97" started-at="2019-08-21T23:30:52Z" finished-at="2019-08-21T23:30:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AuditCard_GSMAInvalidEID -->
+        <test-method status="FAIL" signature="AuditCard_GSMAInvalidEntityAddress()[pri:0, instance:api.PLCM.Scripts.AuditCard@34340fab]" name="AuditCard_GSMAInvalidEntityAddress" duration-ms="1560" started-at="2019-08-21T23:30:52Z" finished-at="2019-08-21T23:30:54Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [408] but found [500]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [408] but found [500]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at api.PLCM.Scripts.AuditCard.AuditCard_GSMAInvalidEntityAddress(AuditCard.java:602)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AuditCard_GSMAInvalidEntityAddress -->
+        <test-method status="PASS" signature="AuditCard_GSMAInvalidURL()[pri:0, instance:api.PLCM.Scripts.AuditCard@34340fab]" name="AuditCard_GSMAInvalidURL" duration-ms="47" started-at="2019-08-21T23:30:54Z" finished-at="2019-08-21T23:30:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AuditCard_GSMAInvalidURL -->
+        <test-method status="FAIL" signature="AuditCard_GSMALessProfilesinDbThaninResponse()[pri:0, instance:api.PLCM.Scripts.AuditCard@34340fab]" name="AuditCard_GSMALessProfilesinDbThaninResponse" duration-ms="1294" started-at="2019-08-21T23:30:54Z" finished-at="2019-08-21T23:30:55Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [202] but found [500]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [202] but found [500]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at api.PLCM.Scripts.AuditCard.AuditCard_GSMALessProfilesinDbThaninResponse(AuditCard.java:417)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AuditCard_GSMALessProfilesinDbThaninResponse -->
+        <test-method status="PASS" signature="AuditCard_GSMAMissingAPIToken()[pri:0, instance:api.PLCM.Scripts.AuditCard@34340fab]" name="AuditCard_GSMAMissingAPIToken" duration-ms="1378" started-at="2019-08-21T23:30:55Z" finished-at="2019-08-21T23:30:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AuditCard_GSMAMissingAPIToken -->
+        <test-method status="PASS" signature="AuditCard_GSMAMissingCallbackPassword()[pri:0, instance:api.PLCM.Scripts.AuditCard@34340fab]" name="AuditCard_GSMAMissingCallbackPassword" duration-ms="54" started-at="2019-08-21T23:30:57Z" finished-at="2019-08-21T23:30:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AuditCard_GSMAMissingCallbackPassword -->
+        <test-method status="PASS" signature="AuditCard_GSMAMissingCallbackUsername()[pri:0, instance:api.PLCM.Scripts.AuditCard@34340fab]" name="AuditCard_GSMAMissingCallbackUsername" duration-ms="138" started-at="2019-08-21T23:30:57Z" finished-at="2019-08-21T23:30:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AuditCard_GSMAMissingCallbackUsername -->
+        <test-method status="PASS" signature="AuditCard_GSMAMissingEID()[pri:0, instance:api.PLCM.Scripts.AuditCard@34340fab]" name="AuditCard_GSMAMissingEID" duration-ms="34" started-at="2019-08-21T23:30:57Z" finished-at="2019-08-21T23:30:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AuditCard_GSMAMissingEID -->
+        <test-method status="FAIL" signature="AuditCard_GSMAMoreProfilesInDbThaninResponse()[pri:0, instance:api.PLCM.Scripts.AuditCard@34340fab]" name="AuditCard_GSMAMoreProfilesInDbThaninResponse" duration-ms="1369" started-at="2019-08-21T23:30:57Z" finished-at="2019-08-21T23:30:58Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [202] but found [500]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [202] but found [500]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at api.PLCM.Scripts.AuditCard.AuditCard_GSMAMoreProfilesInDbThaninResponse(AuditCard.java:386)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AuditCard_GSMAMoreProfilesInDbThaninResponse -->
+        <test-method status="FAIL" signature="AuditCard_GSMAStandardRole()[pri:0, instance:api.PLCM.Scripts.AuditCard@34340fab]" name="AuditCard_GSMAStandardRole" duration-ms="63" started-at="2019-08-21T23:30:58Z" finished-at="2019-08-21T23:30:58Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [202] but found [401]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [202] but found [401]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:513)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
+	at org.testng.Assert.assertEquals(Assert.java:116)
+	at org.testng.Assert.assertEquals(Assert.java:389)
+	at org.testng.Assert.assertEquals(Assert.java:399)
+	at api.PLCM.Scripts.AuditCard.AuditCard_GSMAStandardRole(AuditCard.java:448)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:86)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:822)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1130)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:782)
+	at org.testng.TestRunner.run(TestRunner.java:632)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1244)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+	at org.testng.TestNG.run(TestNG.java:1064)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:113)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:206)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:177)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AuditCard_GSMAStandardRole -->
+      </class> <!-- api.PLCM.Scripts.AuditCard -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

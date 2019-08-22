@@ -10,11 +10,11 @@ import io.restassured.specification.RequestSpecification;
 
 import org.json.simple.JSONObject;
 
-public class APIEntityInfoPOSTTests {
+public class APIEntityInfoPOSTTests{
 
 	@SuppressWarnings("unchecked")
 	@Test(enabled=true)
-	public void CreateSm_Success()
+	public void CreateSm_Success() throws Exception
 	{
 		RestAssured.useRelaxedHTTPSValidation();
 		RestAssured.baseURI ="https://localhost:8445/v2/sm";
@@ -33,7 +33,7 @@ public class APIEntityInfoPOSTTests {
 		 requestParams.put("entity_password",  "restapiautomation");
 		 requestParams.put("entity_property_file_path",  "/callback/example/example.properties");
 		 requestParams.put("entity_cert_alias",  "saisr");
-		 
+		 		 
 		 httpRequest.header("Authorization", "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IkIwNjdCQTc0Qzg5OUMxRUJCQTlFRURENjEyRENCMDNCNzlCQjQzREQiLCJ0eXAiOiJKV1QiLCJ4NXQiOiJzR2U2ZE1pWndldTZudTNXRXR5d08zbTdROTAifQ.eyJuYmYiOjE1NjMyNjE1MjEsImV4cCI6MTU2MzI2NTEyMSwiaXNzIjoiaHR0cHM6Ly9hY2MtaWRlbnRpdHkudGVsZWVuYS5jb20iLCJhdWQiOlsiaHR0cHM6Ly9hY2MtaWRlbnRpdHkudGVsZWVuYS5jb20vcmVzb3VyY2VzIiwiZVNpbUh1YlNlcnZpY2UiXSwiY2xpZW50X2lkIjoiZVNJTUh1YiIsIk1hbmFnZUVTaW1zIjoidHJ1ZSIsInN1YiI6IjExNjgxIiwiYXV0aF90aW1lIjoxNTYzMjYxNTIxLCJpZHAiOiJsb2NhbCIsInByZWZlcnJlZF91c2VybmFtZSI6IkFTMDA5MjgzN0B0ZWNobWFoaW5kcmEuY29tIiwibmFtZSI6IkFiaGlzaGVrIEt1bWFyIFNhaCIsImVtYWlsIjoiQVMwMDkyODM3QHRlY2htYWhpbmRyYS5jb20iLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIkNybUNvbXBhbnlJZCI6IjNkYWNlYjViLTRiZDctZTYxMS1iZDk5LTAwNTA1NjlkMjdhZiIsIkNybUFjY291bnRJZCI6ImE4ODRjODNkLTRjODUtNDk3YS1iMTY5LTk4ZWIzOTkxMTVjOCIsInJvbGUiOlsiNTVfQ1VTVE9NRVItVVNFUiIsIjU1X2VTaW1IdWJfdXNlciIsIjU1X2VTaW1IdWJfYWRtaW4iLCI1NV9lU2ltSHViX3N1cGVyX2FkbWluIl0sInNjb3BlIjpbImVTaW1IdWIuQVBJIiwiZVNpbUh1Yi5HVUkiXSwiYW1yIjpbImN1c3RvbSJdfQ.ITZl4u4ggn9PHTkZtV1mepIasB_vVEr2C5NT1AuNSxDkj9EvmIeXGExC6KW8pNKuWPQ4p-bFHRtQno0iwgL1-lDSLbVjzLIUZi3hVpsRgcX_0ey1-5-CkGNHoEXAro-dKuxbgWcjSCK5u0-rL2mQJxjJqdtyonopTjQBfiFCgU9MoTricDbCs_x_tdB3y2OG43-tmFBnkxcBNGBsyXxx-bV7TKSIWiNCLZxBRx0LnQBDrCLmxd4qj8owjaWefyoVBGJkqqXqTpWdl2uAhIGfUzK_BtjDxI_RQT9XCP9WTDFIejCu_kJ6jiyWPn4dUPtnxSsCDONZZm_QKTfMtRSeIQ");
 		 httpRequest.header("Content-Type", "application/json");
 		 

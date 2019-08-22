@@ -6,7 +6,7 @@ import api.PLCM.Scripts.*;
 public class PLCM_Collections {
 
 	@Test(priority=1, enabled = true)
-	public void SmEntityInfo() {
+	public void SmEntityInfo() throws Exception {
 
 		APIEntityInfoPOSTTests smpost = new APIEntityInfoPOSTTests();
 
@@ -16,8 +16,8 @@ public class PLCM_Collections {
 		System.out.println("==============================");
 		System.out.println("Before loading data in to Entity_Info table");
 		smpost.CreateSm_Success();
-		/*smpost.CreateSm_SuccessAdminRole();
-		smpost.CreateSm_SuccessCustomerOwnerRole();
+		smpost.CreateSm_SuccessAdminRole();
+		//smpost.CreateSm_SuccessCustomerOwnerRole();
 		smpost.CreateSm_SuccessStandardRole();
 		smpost.CreateSmAlreadyExists();
 		smpost.CreateSmAPITokenMissing();
@@ -53,7 +53,7 @@ public class PLCM_Collections {
 		smput.UpdateSmAdminRole();
 		smput.UpdateSmAlreadyExists();
 		smput.UpdateSmAPITokenMissing();
-		smput.UpdateSmCustomerOwnerRole();
+		//smput.UpdateSmCustomerOwnerRole();
 		smput.UpdateSmEntityAddressMissing();
 		smput.UpdateSmEntityAPITypeMissing();
 		smput.UpdateSmEntityIdMissing();
@@ -85,7 +85,7 @@ public class PLCM_Collections {
 		smget.EntityIdExists();
 		smget.EntityIdExistsAdminRole();
 		smget.EntityIdExistsAlphaNumeric();
-		smget.EntityIdExistsCustomerOwnerRole();
+		//smget.EntityIdExistsCustomerOwnerRole();
 		smget.EntityIdExistsStandardRole();
 		smget.EntityIdExistsSuperAdminRole();
 		smget.NoEntityExists();
@@ -103,7 +103,7 @@ public class PLCM_Collections {
 		smdelete.DeleteEntityIdExists();
 		smdelete.DeleteEntityIdExistsAdminRole();
 		smdelete.DeleteEntityIdExistsAlphaNumeric();
-		smdelete.DeleteEntityIdExistsCustomerOwnerRole();
+		//smdelete.DeleteEntityIdExistsCustomerOwnerRole();
 		smdelete.DeleteEntityIdExistsStandardRole();
 		smdelete.DeleteEntityV1andnotV2();
 		smdelete.DeleteWhenInvalidAPIToken();
@@ -113,12 +113,12 @@ public class PLCM_Collections {
 		System.out.println("After deleting data from Entity_Info table");
 		System.out.println("============================");
 		System.out.println("SM API DELETE REQUESTS END HERE");
-		System.out.println("============================"); */
+		System.out.println("============================"); 
 
 	}
 
 	@Test(priority=2, enabled = false)
-	public void Uprofile(){
+	public void Uprofile() throws Exception{
 
 		APIUProfilePOSTTests uppost = new APIUProfilePOSTTests();
 
