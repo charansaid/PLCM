@@ -3,22 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="api.PLCM.Scripts.AuditCard"/>
+      <class name="api.UpdatePolicyRules.UpdatePolicyRules">
+        <methods>
+          <include name="UpdatePolicyRulesMissingAPIToken"/>
+        </methods>
+      </class> <!-- api.UpdatePolicyRules.UpdatePolicyRules -->
     </classes>
   </test> <!-- Default test -->
-  <test name="Default test(failed)">
-    <classes>
-      <class name="api.PLCM.Scripts.AuditCard">
-        <methods>
-          <include name="AuditCard_GSMAAdminRole"/>
-          <include name="AuditCard_GSMAInvalidEntityAddress"/>
-          <include name="AuditCard_GSMALessProfilesinDbThaninResponse"/>
-          <include name="AuditCard_GSMAEntityNotFound"/>
-          <include name="AuditCard_GSMACustomerOwnerRole"/>
-          <include name="AuditCard_GSMAMoreProfilesInDbThaninResponse"/>
-          <include name="AuditCard_GSMAStandardRole"/>
-        </methods>
-      </class> <!-- api.PLCM.Scripts.AuditCard -->
-    </classes>
-  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
